@@ -1,39 +1,36 @@
 <template>
   
   <div class="container">
-    <h1>
-    My first Vue app
-  </h1>
-  <button>Add Task</button>
+    <Header title="My first Vue app" action="Get Started" color="lightblue" bgcolor="darkblue"/>
+</div>
+<div class="container">
+    <Header title="To do" action="Add task"/>
+  
 </div>
 
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+import Header from './Header.vue'
+
+    export default {
+      name: 'App',
+      components: {
+        Header
+      }
+    }
 </script>
 
 <style>
 #app {
 text-align: center;
-color: greenyellow;
 margin-top: 2rem;
 }
 .container {
   border: 0.1rem solid steelblue;
   padding: 2rem;
   max-width: 500px;
-  margin: auto;
+  margin: 20px auto;
 }
-button {
-  padding: 10px 20px;
-  font-size: 15px;
-  background-color: seagreen;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 </style>
